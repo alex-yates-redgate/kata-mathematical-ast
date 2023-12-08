@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MathematicalAST
 {
-    internal interface IVisitor
+    public interface IVisitor
     {
         void VisitOperand(Operand element);
         void VisitOperation(Operation element);

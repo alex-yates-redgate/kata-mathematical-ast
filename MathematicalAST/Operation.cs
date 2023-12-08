@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MathematicalAST
 {
-    internal class Operation : IOperation
+    public record Operation(char type, IExpression left, IExpression right) : IExpression
     {
-        public char Type { get; set; }
 
         public void Accept(IVisitor visitor)
         {
             visitor.VisitOperation(this);
         }
+
 
     }
 }

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MathematicalAST
 {
-    internal interface IOperand
+    public class Mathematical
     {
-        void Accept(IVisitor visitor);
+        public static IExpression parse(string input)
+        {
+            return new Operand(int.Parse(input));
+        }
     }
 }

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MathematicalAST
 {
-    internal class Operand: IOperand
+    public record Operand(int Value): IExpression
     {
-        public int Value { get; set; }
-
         public void Accept(IVisitor visitor) {
             visitor.VisitOperand(this);
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathematicalAST
 {
-    internal interface IOperation
+    public interface IExpression
     {
         void Accept(IVisitor visitor);
     }
