@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MathematicalAST
 {
-    public record Operation(char type, IExpression left, IExpression right) : IExpression
+    public record Operation(IExpression left, IExpression right) : IExpression
     {
 
         public void Accept(IVisitor visitor)
